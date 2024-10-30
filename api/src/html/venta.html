@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hambre Cero - Interfaz del Vendedor</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column; 
+            font-family: Arial, sans-serif;
+            background-color: white;
+            margin: 0;
+            color: black;
+            height: 100vh; 
+        }
+
+        
+        .top-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5px 15px;
+            border-bottom: 1px solid black;
+            box-sizing: border-box;
+            height: 70px;
+            width: 100%;
+        }
+
+      
+        .top-bar .logo-container img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            margin-right: 8px;
+        }
+
+       
+        .project-title {
+            font-size: 24px;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .contact-info {
+            font-size: 12px;
+            text-align: right;
+        }
+
+        .main-container {
+            display: flex;
+            height: calc(100% - 70px); 
+        }
+
+        
+        .sidebar {
+            width: 250px;
+            border-right: 1px solid black;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: auto; 
+        }
+
+        .sidebar h2 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .sidebar-item {
+            margin: 15px 0;
+            font-size: 16px;
+            padding: 5px;
+            border: 1px solid black;
+            display: block;
+            text-align: left;
+            cursor: pointer; 
+        }
+
+        .button {
+            padding: 10px;
+            border: 1px solid black;
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            background-color: #f0f0f0; 
+        }
+
+        .sub-menu {
+            margin-top: 10px;
+            padding-left: 15px;
+            font-size: 14px;
+            border: 1px dashed black;
+        }
+        
+        .location {
+            margin-top: 20px;
+            font-size: 14px;
+            border-top: 1px solid black;
+            padding-top: 15px;
+        }
+
+        .location-info {
+            margin: 15px 0;
+            font-size: 16px;
+            padding: 5px;
+            border: 1px solid black;
+            display: block;
+            text-align: left;
+            cursor: pointer; 
+        }
+        .sub-menu-location {
+            margin-top: 10px;
+            padding-left: 15px;
+            font-size: 14px;
+            border: 1px dashed black;
+        }
+
+        
+        .products-section {
+            margin-left: 20px; 
+            padding: 20px;
+            flex-grow: 1; 
+            overflow-y: auto; /* Permitir desplazamiento si el contenido es largo */
+        }
+
+        .product-item {
+            margin: 10px 0;
+            border: 1px solid black; /* Borde negro para cada producto */
+            padding: 10px; /* Espaciado interno */
+            display: flex; /* Para alinear imagen y texto en fila */
+            align-items: center; /* Centra verticalmente */
+        }
+
+        .product-image {
+            width: 80px; /* Ajusta el tamaño de la imagen según sea necesario */
+            height: auto; /* Mantiene la proporción de la imagen */
+            margin-right: 10px; /* Espacio entre la imagen y la información */
+        }
+
+        .product-info {
+            font-size: 14px; /* Tamaño de fuente para la información */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra superior con logos, título y contacto -->
+    <div class="top-bar">
+        <div class="logo-container">
+            <img src="/img/1.png" alt="Logo 1">
+            <img src="/img/2.png" alt="Logo 2">
+        </div>
+        <div class="project-title">Hambre Cero</div>
+        <div class="contact-info">
+            <p>Tel: +57 310 123 4567</p> <!-- Número de teléfono inventado -->
+            <p>Email: CESMAG@hambrecero.org</p> <!-- Correo electrónico inventado -->
+        </div>
+    </div>
+
+    <!-- Contenedor principal que incluye la barra lateral y la sección de productos -->
+    <div class="main-container">
+        <!-- Barra lateral en la parte inferior izquierda -->
+        <div class="sidebar">
+            <h2>Panel de Ventas</h2>
+            
+            <!-- Opciones de menú -->
+            <div class="sidebar-item">Explorar mis Productos</div>
+            
+            <!-- Agregar Producto con submenú -->
+            <div class="sidebar-item">
+                Agregar Producto
+                <div class="sub-menu">
+                    <p>Nombre del Producto:</p>
+                    <p>ID del Producto:</p>
+                    <p>Precio:</p>
+                    <p>Cantidad:</p>
+                    <p>Descripción:</p>
+                </div>
+            </div>
+            <div class="button">Agregar Producto</div>
+
+            <!-- Editar Producto con submenú -->
+            <div class="sidebar-item">
+                Editar Producto
+                <div class="sub-menu">
+                    <p>ID del Producto:</p>
+                    <p>Nombre del Producto:</p>
+                    <p>Precio:</p>
+                    <p>Cantidad:</p>
+                    <p>Descripción:</p>
+                </div>
+            </div>
+
+            <!-- Botón de Editar Publicación -->
+            <div class="button">Editar Publicación</div>
+
+            <!-- Información de Ubicación de Locales -->
+            <div class="location">
+                <h2>Ubicación de Locales</h2>
+                <div class="location-info">
+                    Información de Ubicación
+                    <div class="sub-menu-location">
+                        <p>Nombre de Local:</p>
+                        <p>Dirección:</p>
+                        <p>Teléfono:</p>
+                    </div>
+                </div>
+            </div>
+            <div class="button">Editar Ubicación</div>
+        </div>
+
+        <!-- Sección de Productos del Vendedor -->
+        <div class="products-section">
+            <h2>Mis Productos</h2>
+            
+            <div class="product-item">
+                <img src="/img/a.webp" alt="Producto A" class="product-image">
+                <div class="product-info">
+                    <p><strong>Nombre:</strong> </p>
+                    <p><strong>Cantidad:</strong> </p>
+                    <p><strong>Precio:</strong> </p>
+                    <p><strong>Descripción:</strong></p>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <img src="/img/b.webp" alt="Producto B" class="product-image">
+                <div class="product-info">
+                    <p><strong>Nombre:</strong> </p>
+                    <p><strong>Cantidad:</strong> </p>
+                    <p><strong>Precio:</strong> </p>
+                    <p><strong>Descripción:</strong></p>
+                </div>
+            </div>
+            
+            <div class="product-item">
+                <img src="/img/c.jpg" alt="Producto C" class="product-image">
+                <div class="product-info">
+                    <p><strong>Nombre:</strong> </p>
+                    <p><strong>Cantidad:</strong> </p>
+                    <p><strong>Precio:</strong> </p>
+                    <p><strong>Descripción:</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

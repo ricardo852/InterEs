@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hambre Cero - Interfaz del Usuario</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: white;
+            color: black;
+        }
+
+        /* Barra superior */
+        .top-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            border-bottom: 1px solid black;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-container img {
+            width: 60px;
+            height: 60px;
+        }
+
+        .project-title {
+            flex-grow: 1;
+            font-size: 24px;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            text-align: center;
+        }
+
+        .contact-info {
+            text-align: right;
+            font-size: 12px;
+            line-height: 1.5;
+            max-width: 200px;
+        }
+
+        /* Contenedor principal */
+        .main-container {
+            display: flex;
+            flex-grow: 1;
+            overflow: hidden;
+        }
+
+        /* Barra lateral */
+        .sidebar {
+            width: 250px;
+            padding: 20px;
+            border-right: 1px solid black;
+            overflow-y: auto;
+        }
+
+        .sidebar h2 {
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .sidebar-item, .button {
+            display: block;
+            padding: 5px;
+            margin: 10px 0;
+            font-size: 16px;
+            text-align: left;
+            border: 1px solid black;
+            text-align: center;
+            background-color: #f0f0f0;
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .button {
+            background-color: white;
+        }
+
+        /* Sección de Encuestas */
+        .survey-section {
+            flex-grow: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .survey-section h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .survey-item {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border: 1px solid black;
+            margin-bottom: 20px;
+        }
+
+        .survey-item h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .survey-input {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            font-size: 14px;
+            border: 1px solid black;
+            background-color: white;
+        }
+
+        .survey-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra superior -->
+    <div class="top-bar">
+        <div class="logo-container">
+            <img src="/img/1.png" alt="Logo 1">
+            <img src="/img/2.png" alt="Logo 2">
+        </div>
+        <div class="project-title">Hambre Cero</div>
+        <div class="contact-info">
+            <p>Tel: +57 310 123 4567</p>
+            <p>Email: contacto@hambrecero.org</p>
+        </div>
+    </div>
+
+    <!-- Contenedor principal -->
+    <div class="main-container">
+        <!-- Barra lateral -->
+        <div class="sidebar">
+            <h2>Menú del Usuario</h2>
+            <a href="#" class="sidebar-item">Buscar Encuestas</a>
+            <a href="#" class="sidebar-item">Mis Encuestas</a>
+            <a href="#" class="sidebar-item">Historial de Respuestas</a>
+            <a href="#" class="sidebar-item">Perfil</a>
+            <a href="#" class="button">Responder Encuesta</a>
+        </div>
+
+        <!-- Sección de Encuestas -->
+        <div class="survey-section">
+            <h2>Buscar Encuestas</h2>
+            
+            <div class="survey-item">
+                <h3>Título de la Encuesta:</h3>
+                <input type="text" class="survey-input" placeholder="Ingrese el título de la encuesta para buscar">
+
+                <button class="survey-button">Buscar</button>
+            </div>
+
+            <div class="survey-item">
+                <h3>Encuesta Ejemplo</h3>
+                <p>¿Esta es una pregunta ejemplo?</p>
+                <input type="radio" name="respuesta" value="Sí"> Sí<br>
+                <input type="radio" name="respuesta" value="No"> No<br>
+                <button class="survey-button">Enviar Respuesta</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
