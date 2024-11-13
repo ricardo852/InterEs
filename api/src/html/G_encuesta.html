@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="api/src/css/style.css">
     <title>Hambre Cero - Interfaz del Empresario</title>
     <style>
         * {
@@ -135,21 +137,70 @@
             border: none;
             cursor: pointer;
         }
+header{
+         
+         top: 0;
+         left: 0;
+         width: 100%;
+         padding: 20px 20px;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         
+         
+}
+.logo2{
+    font-size: 2.3rem;
+    color: rgb(0, 0, 0);
+    user-select: none;
+    display: flex; 
+    align-items: center; 
+}
+
+.logo img {
+    margin-right: 10px; 
+}
+.navegation2 a{
+    position: relative;
+    font-size: 1.1rem;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+.navegation2 .btn{
+    width: 140px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    margin-left: 40px;
+}
+        
     </style>
 </head>
 <body>
 
     <!-- Barra superior -->
     <div class="top-bar">
-        <div class="logo-container">
-            <img src="/img/1.png" alt="Logo 1">
-            <img src="/img/2.png" alt="Logo 2">
-        </div>
-        <div class="project-title">Hambre Cero</div>
-        <div class="contact-info">
-            <p>Tel: +57 310 123 4567</p>
-            <p>Email: contacto@hambrecero.org</p>
-        </div>
+        <header class="header">
+      
+            <h2 class="logo2">
+              <img src="/img/Captura_de_pantalla_2024-10-29_022809-removebg-preview.png" width="100px" >
+              Hambre cero
+            </h2>
+            <nav class="navegation2">
+                <a href="/index.html">Inicio</a>
+                <a href="/api/src/html/C_encuesta.html">Encuestas</a>
+                <a href="/api/src/html/comprador.html">Productos</a>
+                <a href="/api/src/html/register.html">Registrarse</a>
+                <button  class="btn"  onclick="window.location.href='/api/src/html/login_form.html'" >Inicio Sesión</button>
+            </nav>
+          </header>
     </div>
 
     <!-- Contenedor principal -->

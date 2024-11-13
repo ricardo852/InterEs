@@ -12,12 +12,43 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(0,0,0);
+    background: url(http://127.0.0.1/interes/img/HambreCero.png);
+    background-size: cover;
+    background-position: center;
+}
+.boby2{
+     
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    background-size: cover;
+    background-position: center;
+}
+
+.boby3{
+     
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 255, 255);
     background-size: cover;
     background-position: center;
 }
 
 header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99;
+}
+
+.header2{
     position: fixed;
     top: 0;
     left: 0;
@@ -37,6 +68,14 @@ header{
     align-items: center; 
 }
 
+.logo2{
+    font-size: 2.3rem;
+    color: rgb(0, 0, 0);
+    user-select: none;
+    display: flex; 
+    align-items: center; 
+}
+
 .logo img {
     margin-right: 10px; 
 }
@@ -44,7 +83,16 @@ header{
 .navegation a{
     position: relative;
     font-size: 1.1rem;
-    color: white;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navegation2 a{
+    position: relative;
+    font-size: 1.1rem;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     font-weight: 500;
     margin-left: 40px;
@@ -63,14 +111,74 @@ header{
     margin-left: 40px;
 }
 
-body::before{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.164);
+.navegation2 .btn{
+    width: 140px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    margin-left: 40px;
+}
+
+.preUno {
     align-items: center;
-   
+    text-align: center;
+    color: #ffffff;
+}    
+
+.inicio{
+    display: flex;
+    color: #ffffff;
+    font-size:  3em;
+}
+
+.verMas {
+    display: flex;            
+    justify-content: center;   
+    align-items: center;       
+    height: 100px; 
+    
+               
+}
+.verMas .btn2{
+    width: 180px;
+    height: 50px;
+    display: flex;            
+    justify-content: center;   
+    align-items: center; 
+    background: rgb(212, 201, 201);
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    margin: 3px;
+    cursor: pointer; 
+}  
+
+
+.boby3 div{
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+}
+
+.boby3 .texto{
+   overflow: hidden;
+}
+.boby3 .img_niño{
+    
+    float: left;
+    margin-right: 20px;
+    object-fit: cover; /* Mantiene la relación de aspecto y cubre el área */
+    clip-path: circle(150px at center);
+}
+
+.form_introduccion{
+    width: 100%;
+    padding: 0;
 }
 
 .frame{
@@ -224,4 +332,7 @@ body::before{
 }
 .forgot {
     font-size: 12px;
+}
+.main2{
+    margin: 100px;
 }
